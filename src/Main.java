@@ -37,14 +37,15 @@ public class Main {
         String dateTimeFormatter = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         System.out.println(dateTimeFormatter);
 
+        printTime();
+
+
+    }
+
+    private static void printTime() {
         LocalDateTime localDateTimes = LocalDateTime.now();
         DayOfWeek dw = localDateTimes.getDayOfWeek();
-        System.out.println(dw);
-        System.out.println(dw.getValue());
         String format = localDateTimes.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分ss秒"));
-        System.out.println(format);
         System.out.println(format.substring(0 , 11) + "(" + dw + ")" + format.substring(11, format.length()));
-
-
     }
 }
