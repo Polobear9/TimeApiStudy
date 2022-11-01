@@ -40,6 +40,10 @@ public class Main {
         String dateTimeFormatter = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         System.out.println(dateTimeFormatter);
 
+        LocalDateTime localDateTimes = LocalDateTime.now();
+        String format = localDateTimes.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分ss秒"));
+        System.out.println(format);
+
 
     }
 }
