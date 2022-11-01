@@ -1,8 +1,5 @@
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Period;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Formatter;
@@ -41,8 +38,12 @@ public class Main {
         System.out.println(dateTimeFormatter);
 
         LocalDateTime localDateTimes = LocalDateTime.now();
+        DayOfWeek dw = localDateTimes.getDayOfWeek();
+        System.out.println(dw);
+        System.out.println(dw.getValue());
         String format = localDateTimes.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分ss秒"));
         System.out.println(format);
+        System.out.println(format.substring(0 , 11) + "(" + dw + ")" + format.substring(11, format.length()));
 
 
     }
