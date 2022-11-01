@@ -3,7 +3,9 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Formatter;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,6 +35,11 @@ public class Main {
         Duration duration = Duration.ofMinutes(30);
         System.out.println(duration);
         System.out.println(duration.get(ChronoUnit.SECONDS));
-        System.out.println(ChronoUnit.DAYS.between(date,date_Tomorrow));
+        System.out.println(ChronoUnit.DAYS.between(date, date_Tomorrow));
+
+        String dateTimeFormatter = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        System.out.println(dateTimeFormatter);
+
+
     }
 }
