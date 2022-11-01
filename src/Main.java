@@ -1,8 +1,6 @@
-
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Formatter;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,8 +10,8 @@ public class Main {
 
         LocalDateTime dateTime = LocalDateTime.now();
         System.out.println(dateTime);
-        LocalDateTime zonedateTime = LocalDateTime.now();
-        System.out.println(zonedateTime);
+        LocalDateTime zoneDateTime = LocalDateTime.now();
+        System.out.println(zoneDateTime);
 
         System.out.println(dateTime.minusDays(1));
         System.out.println(date.minusYears(1).getYear());
@@ -45,7 +43,7 @@ public class Main {
     private static void printTime() {
         LocalDateTime localDateTimes = LocalDateTime.now();
         DayOfWeek dw = localDateTimes.getDayOfWeek();
-        String format = localDateTimes.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分ss秒"));
-        System.out.println(format.substring(0 , 11) + "(" + dw + ")" + format.substring(11, format.length()));
+        String format = localDateTimes.format(DateTimeFormatter.ofPattern("yyyy年MM月dd日 -> HH時mm分ss秒"));
+        System.out.println(format.substring(0, 11) + "(" + dw + ")" + format.substring(11));
     }
 }
